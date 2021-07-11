@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bhatt_saheb chatbot</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<head>
+	<style>
+	body {background-color: powderblue;}
+	h1   {color: blue;}
+	p    {color: red;}
+	</style>
+	</head>
+<body>
+ 	<div>
+		<img class="img_style" src="mypic.jpg" alt="mypic" style="width:170px;height:100px">
+	</div>
+	<div class="container">
+		<form action="/resp" method="POST">
+			<div class="form-group">
+				<label for="exampleInputEmail1">(Wartalap Yantra) Chatbot</label>
+				<br>
+				<input type="text" name="user_input" class="form-control" placeholder="(Apni pareshani batayen)Type your query">
+				<br>
+				<button type="submit" class="btn btn-primary">(Bhejen) Send</button>
+				<br>
+			</div>
+		</form>
+		<div class="container">
+			<div class="alert alert-primary" role="alert">
+				{% for elements in conv %}
+				<p>Grahak (Client):-> {{elements[0]}}<p>
+				<br/>
+				<p>Swachalit wartalap BOT:-> {{elements[1]}}</p>
+				<br/>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<p>Pradarshitkarta :- bhatt_saheb quotes<br></p>
+</body>
+</html>
+
